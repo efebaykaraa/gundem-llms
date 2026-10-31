@@ -1,0 +1,4 @@
+{"time":"2026-10-30T22:01:26.164762+00:00","event":"rss_completed","source":"sol","count":10,"seconds":0.722}
+{"time":"2026-10-30T22:01:27.944125+00:00","event":"rss_completed","source":"tkp","count":30,"seconds":1.764}
+{"time":"2026-10-30T22:01:30.977400+00:00","event":"rss_completed","source":"pe","count":40,"seconds":3.018}
+{"time":"2026-10-30T22:01:30.992825+00:00","event":"collection_ready","unique":80,"failed_sources":0,"out":"work/distill09-data/headlines.jsonl"}

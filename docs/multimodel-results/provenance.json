@@ -1,0 +1,696 @@
+{
+  "local_date": "2026-11-01",
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4070 SUPER",
+    "gpu_memory_mib": 12282,
+    "driver": "580.178.04"
+  },
+  "dataset": {
+    "counts": {
+      "train": 825,
+      "validation": 107,
+      "test": 101
+    },
+    "seed": 42,
+    "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+    "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+    "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+    "split_sha256": {
+      "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+      "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+      "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+    }
+  },
+  "training": {
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "rank": 16,
+    "accumulation": 8,
+    "max_length": 512,
+    "seed": 42,
+    "max_steps": -1
+  },
+  "evaluation": {
+    "batch_size": 4,
+    "max_new_tokens": 160,
+    "warmup": 1,
+    "dtype": "bfloat16",
+    "decoding": "greedy",
+    "json_constraints": false
+  },
+  "source_snapshot_sha256": {
+    "configs/models.json": "4c915dfcbec0bd5e8dd80c2d0fadd158d7467f8521bbb55851fb8194c8db9714",
+    "lab/__init__.py": "70f07199e2da6c44fe95603fa5422a3ad1f200cca1a2d89a83069cf5aa3131ff",
+    "lab/common.py": "a3d17b1bd4fe1b877614731d7c726b83071973e412414d203a58f54488f05c90",
+    "lab/evaluate.py": "e2577cf5c23f897285dfd8b2211164c75fbd40b8f3633a97ba15dd8e6b136007",
+    "lab/loss.py": "e436733238337dc12f51554f2359476acc85b21517233d2ef027815d2eb9a6b8",
+    "lab/modeling.py": "3dba56642aa2637fbae7a277ffa80d90540dde2afc6e91a583e1aa40445a36fe",
+    "lab/prefetch.py": "e78c0aa6d0b3be5dadc31ef2e1b38bcb662f06f45b8b7f8a8060352131fb6275",
+    "lab/report.py": "91fd4d03e8095c90f3db86f5d7feee25b8e9f1ba9b81090bfd5056dc418b4273",
+    "lab/runner.py": "71f91391308aff638e19fe09f3cb68190cb781c8dc2df823525310cd84fc353b",
+    "lab/workspace.py": "68bd61baec638b6395b76d674bfe4dfceb1bdb6079f9b4a3386b3f8b029a1092",
+    "pipeline.py": "e9672c9d96f86aaeb08f93a744978ab321045b0014c21496eb851da044a0296e",
+    "train.py": "405c16ac1013f1e624d3c3eb2f94f9f83c259668b9c7611670ed71cf08e2ee54",
+    "lab/scoring.py": "15c974b5b28dd9d0e028e5dbe3378a07ecad455c4a62d5ed24938a737f00bbbc"
+  },
+  "experiments": [
+    {
+      "model": {
+        "id": "gpt-x3-150m",
+        "repo": "AxiomicLabs/GPT-X3-150M",
+        "revision": "541bdc160e37de749378df2cf7de4023c8991fad",
+        "label": "GPT-X3 150M",
+        "prompt_style": "auto",
+        "note": "Custom hybrid GDN architecture; training and cache support are tested by the suite."
+      },
+      "training_manifest": {
+        "student": "AxiomicLabs/GPT-X3-150M",
+        "revision": "541bdc160e37de749378df2cf7de4023c8991fad",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.09357117116451263,
+          "eval_runtime": 5.5534,
+          "eval_samples_per_second": 19.267,
+          "eval_steps_per_second": 19.267,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "auto",
+        "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+        "gradient_checkpointing": false,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "a1fdf0a4e75688c345493a87a471d9c0d266bb1e279460e100ea9f8c0a65374d"
+    },
+    {
+      "model": {
+        "id": "lfm3-posttrained",
+        "repo": "LiquidAI/LFM3-1.7B",
+        "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+        "label": "LFM3 1.7B",
+        "prompt_style": "native",
+        "legacy_adapter": "data-deepseek/adapter"
+      },
+      "training_manifest": {
+        "student": "LiquidAI/LFM3-1.7B",
+        "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.07203872501850128,
+          "eval_runtime": 2.594,
+          "eval_samples_per_second": 41.249,
+          "eval_steps_per_second": 41.249,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        }
+      },
+      "adapter_sha256": "7f20759288203863e5f5d29692ddd3e4501fe52823e7eeca918733abd48333af"
+    },
+    {
+      "model": {
+        "id": "lfm3-base",
+        "repo": "LiquidAI/LFM3-1.7B-Base",
+        "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+        "label": "LFM3 1.7B Base",
+        "prompt_style": "native",
+        "legacy_adapter": "data-deepseek-base/adapter"
+      },
+      "training_manifest": {
+        "student": "LiquidAI/LFM3-1.7B-Base",
+        "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.07155156880617142,
+          "eval_runtime": 2.5603,
+          "eval_samples_per_second": 41.793,
+          "eval_steps_per_second": 41.793,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        }
+      },
+      "adapter_sha256": "28c456a50268feba2f38c102319572b10e5880709307189eb92845ff80358c20"
+    },
+    {
+      "model": {
+        "id": "octen-webgr-0.6b",
+        "repo": "Octen/Octen-WebGR-0.6B",
+        "revision": "fafd37856a14996b2627a450063e63a007afe6b5",
+        "label": "Octen WebGR 0.6B",
+        "prompt_style": "auto",
+        "note": "Specialized URL/SID retrieval model; JSON classification is out of its intended task. Unknown SID tokens count as invalid output."
+      },
+      "training_manifest": {
+        "student": "Octen/Octen-WebGR-0.6B",
+        "revision": "fafd37856a14996b2627a450063e63a007afe6b5",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.1025705337524414,
+          "eval_runtime": 2.9922,
+          "eval_samples_per_second": 35.759,
+          "eval_steps_per_second": 35.759,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "auto",
+        "chat_template_sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+        "gradient_checkpointing": true,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "80af5a834793e38412522778bd385d3b53b6d267b27a25ab69972acdbddc3e1f"
+    },
+    {
+      "model": {
+        "id": "spark-x2.6-1.7b",
+        "repo": "XHToken/Spark-X2.6-1.7B",
+        "revision": "3b9c837215b1a216ba48bca05607c8c509fef0d4",
+        "label": "Spark X2.6 1.7B",
+        "prompt_style": "auto"
+      },
+      "training_manifest": {
+        "student": "XHToken/Spark-X2.6-1.7B",
+        "revision": "3b9c837215b1a216ba48bca05607c8c509fef0d4",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.06965537369251251,
+          "eval_runtime": 3.0377,
+          "eval_samples_per_second": 35.224,
+          "eval_steps_per_second": 35.224,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "auto",
+        "chat_template_sha256": "480576bd2ef80726a0dba6406d72ca37f4f4f9ca747c7f1c8d159dbdf40f6929",
+        "gradient_checkpointing": true,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "c4ab77bab2f4ca777076c7b09415c27ce028ab3d251f67d52f197626db183b8c"
+    },
+    {
+      "model": {
+        "id": "llama-3.2-1b",
+        "repo": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "label": "Llama 3.2 1B",
+        "prompt_style": "plain",
+        "note": "Base checkpoint without a native chat template; explicit plain task template shared by original and distilled."
+      },
+      "training_manifest": {
+        "student": "meta-llama/Llama-3.2-1B",
+        "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.0752670094370842,
+          "eval_runtime": 1.8063,
+          "eval_samples_per_second": 59.236,
+          "eval_steps_per_second": 59.236,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "plain",
+        "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+        "gradient_checkpointing": true,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "b1e8c716c682326a3d15918a7159ca424cfcbf093ac1143b758ae569d69fdc94"
+    },
+    {
+      "model": {
+        "id": "llama-3.2-3b",
+        "repo": "meta-llama/Llama-3.2-3B",
+        "revision": "13afe5124825b4f3751f836b40dafda64c1ed062",
+        "label": "Llama 3.2 3B",
+        "prompt_style": "plain",
+        "note": "Base checkpoint without a native chat template; explicit plain task template shared by original and distilled."
+      },
+      "training_manifest": {
+        "student": "meta-llama/Llama-3.2-3B",
+        "revision": "13afe5124825b4f3751f836b40dafda64c1ed062",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.061685241758823395,
+          "eval_runtime": 3.75,
+          "eval_samples_per_second": 28.534,
+          "eval_steps_per_second": 28.534,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "plain",
+        "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+        "gradient_checkpointing": true,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "4e031b57c13808024b72f8f65a757a803d7ff695f67d6a5f5fb9e51992582e64"
+    },
+    {
+      "model": {
+        "id": "limite-1b-violetto",
+        "repo": "paradigma-inc/limite-1b-violetto",
+        "revision": "9f4d1567975a44c35127503deadfe52d434d734f",
+        "label": "Limite 1B Violetto",
+        "prompt_style": "task-chatml",
+        "note": "Native template requires a fixed math prompt. Both variants use an explicit task ChatML template; experimental LoRA support."
+      },
+      "training_manifest": {
+        "student": "paradigma-inc/limite-1b-violetto",
+        "revision": "9f4d1567975a44c35127503deadfe52d434d734f",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.11257068067789078,
+          "eval_runtime": 3.2565,
+          "eval_samples_per_second": 32.858,
+          "eval_steps_per_second": 32.858,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "task-chatml",
+        "chat_template_sha256": "ee623c62db56b687f89aedbfdea0b05a4d293ad57f2233090601c97d936bc088",
+        "gradient_checkpointing": false,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "d1b2c6ae0c2435343d8c39357a5d9ce2feeab7dc58907ee944b264862047d41c"
+    },
+    {
+      "model": {
+        "id": "qwen3.5-0.8b-base",
+        "repo": "Qwen/Qwen3.5-0.8B-Base",
+        "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+        "label": "Qwen3.5 0.8B Base",
+        "prompt_style": "auto",
+        "note": "Text-only Qwen3_5ForCausalLM path; vision weights are not trained or evaluated."
+      },
+      "training_manifest": {
+        "student": "Qwen/Qwen3.5-0.8B-Base",
+        "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.07155422866344452,
+          "eval_runtime": 3.8112,
+          "eval_samples_per_second": 28.075,
+          "eval_steps_per_second": 28.075,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "auto",
+        "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "gradient_checkpointing": true,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "355c52e75e68d5c5c9c586be8d897776016b9e10693ace696b38a9a69bcdd92c"
+    },
+    {
+      "model": {
+        "id": "qwen3.5-2b-base",
+        "repo": "Qwen/Qwen3.5-2B-Base",
+        "revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+        "label": "Qwen3.5 2B Base",
+        "prompt_style": "auto",
+        "note": "Text-only Qwen3_5ForCausalLM path; vision weights are not trained or evaluated."
+      },
+      "training_manifest": {
+        "student": "Qwen/Qwen3.5-2B-Base",
+        "revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+        "prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+        "dataset_manifest": {
+          "counts": {
+            "train": 825,
+            "validation": 107,
+            "test": 101
+          },
+          "seed": 42,
+          "student_prompt_sha256": "dfa45c6ab059045facb48ae65d70fe4420fb4317262bfe3a6be45e10d1b40f22",
+          "teacher_signature": "e35b5a35da28e8a3294dc55f5410167dd9c1762f70a8fa6f9c5148246ad7ced0",
+          "input_sha256": "d06ef56cc4dcb881c0977f05f0fea04b532ffc216ca8cd7d5ca842474735f818",
+          "split_sha256": {
+            "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+            "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+            "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+          }
+        },
+        "metrics": {
+          "eval_loss": 0.06491860747337341,
+          "eval_runtime": 3.8904,
+          "eval_samples_per_second": 27.503,
+          "eval_steps_per_second": 27.503,
+          "epoch": 3.0
+        },
+        "hyperparameters": {
+          "epochs": 3.0,
+          "learning_rate": 0.0002,
+          "rank": 16,
+          "accumulation": 8,
+          "max_length": 512,
+          "seed": 42,
+          "max_steps": -1
+        },
+        "method": "response-distillation + assistant-only LoRA SFT",
+        "versions": {
+          "torch": "2.14.1+cu130",
+          "transformers": "5.20.2",
+          "peft": "0.21.2"
+        },
+        "split_hashes": {
+          "train": "0196d1d31b182cc52419307dad176411773aef6daf0697c8f5227697f5951208",
+          "validation": "72391945ed03bd73a0ea521f41fb7333116826a796e91982c33a2404e907f055",
+          "test": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c"
+        },
+        "prompt_style": "auto",
+        "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "gradient_checkpointing": true,
+        "loss_contract": "assistant-causal-token-mean-v1"
+      },
+      "adapter_sha256": "4bde4c02af8160ed8ce1e3d4e005ef067fdbd980609adb96a903dec041caeed9"
+    }
+  ],
+  "scoring": {
+    "id": "gundem-score-v1",
+    "name": "Gündem Score",
+    "range": [
+      0,
+      100
+    ],
+    "weights": {
+      "topic_micro_f1": 30,
+      "type_accuracy": 20,
+      "score_accuracy": 30,
+      "exact_match": 20
+    },
+    "score_accuracy": "1 - mean(etki_mae, ciddiyet_mae, aciliyet_mae) / 3",
+    "invalid_policy": "Already penalized in the input metrics; no extra validity multiplier.",
+    "scope": "Teacher-label agreement for this headline task; not general LLM capability or accuracy percent."
+  }
+}

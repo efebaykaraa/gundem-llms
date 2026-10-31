@@ -1,0 +1,10 @@
+{
+  "base_url": "https://api.deepseek.com",
+  "model": "deepseek-flash",
+  "api_key_file": "~/.deepseek_api_key",
+  "timeout": 180,
+  "max_tokens": 512,
+  "temperature": 0,
+  "response_format": "json_object",
+  "extra_body": {"thinking": {"type": "disabled"}}
+}

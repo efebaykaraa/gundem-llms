@@ -1,0 +1,1385 @@
+{
+  "schema_version": 1,
+  "results": [
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.43564356435643564,
+      "topic_micro_f1": 0.9186813186813186,
+      "type_accuracy": 0.8910891089108911,
+      "score_mae": {
+        "etki": 0.3069306930693069,
+        "ciddiyet": 0.09900990099009901,
+        "aciliyet": 0.19801980198019803
+      },
+      "latency_seconds": {
+        "mean": 0.2193927798317319,
+        "p50": 0.2212554147499759,
+        "p95": 0.2265305505006836
+      },
+      "model": "meta-llama/Llama-3.2-3B",
+      "revision": "13afe5124825b4f3751f836b40dafda64c1ed062",
+      "model_id": "llama-3.2-3b",
+      "label": "Llama 3.2 3B",
+      "variant": "distilled",
+      "fingerprint": "d22c8f0a7f95a90d0f4f56c43e7f5aa2e188ddec638617fbd8178eaae2cb6a68",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "plain",
+      "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 22.15867076300492,
+      "headlines_per_second": 4.558035140294827,
+      "parameters": 3212749824,
+      "peak_gpu_allocated_bytes": 6576063488,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 82.08189170565409,
+      "overall_components": {
+        "topic_micro_f1": 27.56043956043956,
+        "type_accuracy": 17.821782178217823,
+        "score_accuracy": 27.986798679867988,
+        "exact_match": 8.712871287128714
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.45544554455445546,
+      "topic_micro_f1": 0.9107142857142857,
+      "type_accuracy": 0.8712871287128713,
+      "score_mae": {
+        "etki": 0.297029702970297,
+        "ciddiyet": 0.0891089108910891,
+        "aciliyet": 0.18811881188118812
+      },
+      "latency_seconds": {
+        "mean": 0.1480775694357056,
+        "p50": 0.1396938042498732,
+        "p95": 0.15241642524961208
+      },
+      "model": "Qwen/Qwen3.5-0.8B-Base",
+      "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+      "model_id": "qwen3.5-0.8b-base",
+      "label": "Qwen3.5 0.8B Base",
+      "variant": "distilled",
+      "fingerprint": "509ea84a97717618d85cbcf43d6a705dc05e97be5f4b5dd5fa4f5f51e8df38c8",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 14.955834513006266,
+      "headlines_per_second": 6.753217275315921,
+      "parameters": 752393024,
+      "peak_gpu_allocated_bytes": 1681498112,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 81.94189061763319,
+      "overall_components": {
+        "topic_micro_f1": 27.32142857142857,
+        "type_accuracy": 17.425742574257427,
+        "score_accuracy": 28.085808580858085,
+        "exact_match": 9.10891089108911
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.45544554455445546,
+      "topic_micro_f1": 0.9140271493212669,
+      "type_accuracy": 0.8316831683168316,
+      "score_mae": {
+        "etki": 0.15841584158415842,
+        "ciddiyet": 0.07920792079207921,
+        "aciliyet": 0.1782178217821782
+      },
+      "latency_seconds": {
+        "mean": 0.16414049907930664,
+        "p50": 0.15524087899939332,
+        "p95": 0.1738352862503234
+      },
+      "model": "Qwen/Qwen3.5-2B-Base",
+      "revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+      "model_id": "qwen3.5-2b-base",
+      "label": "Qwen3.5 2B Base",
+      "variant": "distilled",
+      "fingerprint": "73964e36b81d9ff66900169ab9e4575cc2dad0d18048fd3dadc3ea845f298f46",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 16.57819040700997,
+      "headlines_per_second": 6.092341656137142,
+      "parameters": 1881825088,
+      "peak_gpu_allocated_bytes": 3917654016,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 81.77725012320236,
+      "overall_components": {
+        "topic_micro_f1": 27.420814479638008,
+        "type_accuracy": 16.633663366336634,
+        "score_accuracy": 28.613861386138613,
+        "exact_match": 9.10891089108911
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.4158415841584158,
+      "topic_micro_f1": 0.9265033407572383,
+      "type_accuracy": 0.8910891089108911,
+      "score_mae": {
+        "etki": 0.3069306930693069,
+        "ciddiyet": 0.10891089108910891,
+        "aciliyet": 0.25742574257425743
+      },
+      "latency_seconds": {
+        "mean": 0.18294434273267673,
+        "p50": 0.17565677575021255,
+        "p95": 0.18728866625042428
+      },
+      "model": "XHToken/Spark-X2.6-1.7B",
+      "revision": "3b9c837215b1a216ba48bca05607c8c509fef0d4",
+      "model_id": "spark-x2.6-1.7b",
+      "label": "Spark X2.6 1.7B",
+      "variant": "distilled",
+      "fingerprint": "ef575e0962a15349e4389d0ac5f69d9ca6da0d7b7c977e068621ba3698d5c516",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "480576bd2ef80726a0dba6406d72ca37f4f4f9ca747c7f1c8d159dbdf40f6929",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 18.47737861600035,
+      "headlines_per_second": 5.466143336617013,
+      "parameters": 1707657216,
+      "peak_gpu_allocated_bytes": 3515902976,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 81.68948966166104,
+      "overall_components": {
+        "topic_micro_f1": 27.79510022271715,
+        "type_accuracy": 17.821782178217823,
+        "score_accuracy": 27.755775577557753,
+        "exact_match": 8.316831683168317
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 1,
+      "exact_match": 0.43564356435643564,
+      "topic_micro_f1": 0.9122807017543859,
+      "type_accuracy": 0.8514851485148515,
+      "score_mae": {
+        "etki": 0.25742574257425743,
+        "ciddiyet": 0.12871287128712872,
+        "aciliyet": 0.2376237623762376
+      },
+      "latency_seconds": {
+        "mean": 0.10580221455461244,
+        "p50": 0.1054088242499347,
+        "p95": 0.10832934800055227
+      },
+      "model": "meta-llama/Llama-3.2-1B",
+      "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+      "model_id": "llama-3.2-1b",
+      "label": "Llama 3.2 1B",
+      "variant": "distilled",
+      "fingerprint": "3af58ba9ac64f69ef53b142809a38620c9c3c9a548bb383710fba3679e5ce134",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "plain",
+      "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 10.686023670015857,
+      "headlines_per_second": 9.451598004915343,
+      "parameters": 1235814400,
+      "peak_gpu_allocated_bytes": 2545721344,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 81.03178738926525,
+      "overall_components": {
+        "topic_micro_f1": 27.36842105263158,
+        "type_accuracy": 17.02970297029703,
+        "score_accuracy": 27.92079207920792,
+        "exact_match": 8.712871287128714
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 1,
+      "exact_match": 0.3465346534653465,
+      "topic_micro_f1": 0.8938053097345132,
+      "type_accuracy": 0.8514851485148515,
+      "score_mae": {
+        "etki": 0.33663366336633666,
+        "ciddiyet": 0.1485148514851485,
+        "aciliyet": 0.3069306930693069
+      },
+      "latency_seconds": {
+        "mean": 0.17083472763369,
+        "p50": 0.17068706475038198,
+        "p95": 0.17833313675009776
+      },
+      "model": "LiquidAI/LFM3-1.7B-Base",
+      "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+      "model_id": "lfm3-base",
+      "label": "LFM3 1.7B Base",
+      "variant": "distilled",
+      "fingerprint": "55ad8304e77d495e612475baed33d34e9d2c0f911ba8b360d6c0efb3a7d7f670",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "native",
+      "chat_template_sha256": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 17.25430749100269,
+      "headlines_per_second": 5.853610760829824,
+      "parameters": 1728801536,
+      "peak_gpu_allocated_bytes": 3529842176,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 78.13429130523672,
+      "overall_components": {
+        "topic_micro_f1": 26.814159292035395,
+        "type_accuracy": 17.02970297029703,
+        "score_accuracy": 27.35973597359736,
+        "exact_match": 6.93069306930693
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.36633663366336633,
+      "topic_micro_f1": 0.8744588744588745,
+      "type_accuracy": 0.8415841584158416,
+      "score_mae": {
+        "etki": 0.33663366336633666,
+        "ciddiyet": 0.1188118811881188,
+        "aciliyet": 0.297029702970297
+      },
+      "latency_seconds": {
+        "mean": 0.17559094885140134,
+        "p50": 0.17400575925012163,
+        "p95": 0.18139630325003964
+      },
+      "model": "LiquidAI/LFM3-1.7B",
+      "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+      "model_id": "lfm3-posttrained",
+      "label": "LFM3 1.7B",
+      "variant": "distilled",
+      "fingerprint": "92cfa85cf4fb0caf95df0d5f1d83c3bf8d489dacf0ef48222d1b3dad86138a70",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "native",
+      "chat_template_sha256": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 17.734685833991534,
+      "headlines_per_second": 5.6950543666477795,
+      "parameters": 1728801536,
+      "peak_gpu_allocated_bytes": 3529842176,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 77.88393125026789,
+      "overall_components": {
+        "topic_micro_f1": 26.233766233766236,
+        "type_accuracy": 16.831683168316832,
+        "score_accuracy": 27.491749174917494,
+        "exact_match": 7.326732673267326
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.2376237623762376,
+      "topic_micro_f1": 0.861995753715499,
+      "type_accuracy": 0.6633663366336634,
+      "score_mae": {
+        "etki": 0.42574257425742573,
+        "ciddiyet": 0.15841584158415842,
+        "aciliyet": 0.39603960396039606
+      },
+      "latency_seconds": {
+        "mean": 0.13543742824751265,
+        "p50": 0.13212299274982797,
+        "p95": 0.13618692950058175
+      },
+      "model": "Octen/Octen-WebGR-0.6B",
+      "revision": "fafd37856a14996b2627a450063e63a007afe6b5",
+      "model_id": "octen-webgr-0.6b",
+      "label": "Octen WebGR 0.6B",
+      "variant": "distilled",
+      "fingerprint": "521dcad78b728588c144438adc29a4bbfa90ac7a49b5b45a79d6649c1df80ce4",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 13.679180252998776,
+      "headlines_per_second": 7.383483376341838,
+      "parameters": 730267648,
+      "peak_gpu_allocated_bytes": 1590170624,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 70.61234785898972,
+      "overall_components": {
+        "topic_micro_f1": 25.85987261146497,
+        "type_accuracy": 13.267326732673268,
+        "score_accuracy": 26.73267326732673,
+        "exact_match": 4.752475247524752
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.25742574257425743,
+      "topic_micro_f1": 0.8394495412844036,
+      "type_accuracy": 0.6633663366336634,
+      "score_mae": {
+        "etki": 0.46534653465346537,
+        "ciddiyet": 0.21782178217821782,
+        "aciliyet": 0.38613861386138615
+      },
+      "latency_seconds": {
+        "mean": 0.19761505970295684,
+        "p50": 0.1909034355003314,
+        "p95": 0.20892545750029967
+      },
+      "model": "paradigma-inc/limite-1b-violetto",
+      "revision": "9f4d1567975a44c35127503deadfe52d434d734f",
+      "model_id": "limite-1b-violetto",
+      "label": "Limite 1B Violetto",
+      "variant": "distilled",
+      "fingerprint": "0010d9156ee08ba18806f25d0e5b8c739669bcf28f4696e879766c8edf320b5b",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "task-chatml",
+      "chat_template_sha256": "ee623c62db56b687f89aedbfdea0b05a4d293ad57f2233090601c97d936bc088",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 19.95912102999864,
+      "headlines_per_second": 5.060343080649523,
+      "parameters": 1035254176,
+      "peak_gpu_allocated_bytes": 2541450752,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 70.03497138704697,
+      "overall_components": {
+        "topic_micro_f1": 25.183486238532108,
+        "type_accuracy": 13.267326732673268,
+        "score_accuracy": 26.435643564356436,
+        "exact_match": 5.148514851485149
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 0,
+      "exact_match": 0.24752475247524752,
+      "topic_micro_f1": 0.8333333333333334,
+      "type_accuracy": 0.6633663366336634,
+      "score_mae": {
+        "etki": 0.45544554455445546,
+        "ciddiyet": 0.21782178217821782,
+        "aciliyet": 0.40594059405940597
+      },
+      "latency_seconds": {
+        "mean": 0.3647309652573997,
+        "p50": 0.35784403299976475,
+        "p95": 0.36566297125000347
+      },
+      "model": "AxiomicLabs/GPT-X3-150M",
+      "revision": "541bdc160e37de749378df2cf7de4023c8991fad",
+      "model_id": "gpt-x3-150m",
+      "label": "GPT-X3 150M",
+      "variant": "distilled",
+      "fingerprint": "c3747edc2f4b17a068fe3a3cd4b77cda6a662e5676dad6b4052007b115ee4cc9",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 36.83782749099737,
+      "headlines_per_second": 2.7417469182916103,
+      "parameters": 149400930,
+      "peak_gpu_allocated_bytes": 349567488,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 69.62046204620462,
+      "overall_components": {
+        "topic_micro_f1": 25.0,
+        "type_accuracy": 13.267326732673268,
+        "score_accuracy": 26.402640264026402,
+        "exact_match": 4.9504950495049505
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.927988908405955,
+        "p50": 0.9012784935002855,
+        "p95": 0.9409951395000462
+      },
+      "model": "AxiomicLabs/GPT-X3-150M",
+      "revision": "541bdc160e37de749378df2cf7de4023c8991fad",
+      "model_id": "gpt-x3-150m",
+      "label": "GPT-X3 150M",
+      "variant": "original",
+      "fingerprint": "1c8d1113985e53063b1cab5e5415f75c9275c811b7d571166be648d87744a43a",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 93.72687974900145,
+      "headlines_per_second": 1.0775990865211325,
+      "parameters": 149400930,
+      "peak_gpu_allocated_bytes": 349567488,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.12872873284158962,
+        "p50": 0.10592503724956259,
+        "p95": 0.17876746825004375
+      },
+      "model": "LiquidAI/LFM3-1.7B-Base",
+      "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526",
+      "model_id": "lfm3-base",
+      "label": "LFM3 1.7B Base",
+      "variant": "original",
+      "fingerprint": "7a386f032886b78d2d33c95b1097155e4d600462a6a872709ef3820ebdea309e",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "native",
+      "chat_template_sha256": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 13.00160201700055,
+      "headlines_per_second": 7.768273468756779,
+      "parameters": 1728801536,
+      "peak_gpu_allocated_bytes": 3529842176,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.2558125718414975,
+        "p50": 0.2045610047498485,
+        "p95": 0.5646352467501856
+      },
+      "model": "LiquidAI/LFM3-1.7B",
+      "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+      "model_id": "lfm3-posttrained",
+      "label": "LFM3 1.7B",
+      "variant": "original",
+      "fingerprint": "abae889d7c482f81e94f71059bc5f678be9686fd869174a496b76cf8e4d480a5",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "native",
+      "chat_template_sha256": "f45005c50cd2a97329722bf3a2dee9f16c04cdf825a589b280fb7e99e6827818",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 25.83706975599125,
+      "headlines_per_second": 3.909112022139412,
+      "parameters": 1728801536,
+      "peak_gpu_allocated_bytes": 3529842176,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.7189910426634807,
+        "p50": 0.7045274602496647,
+        "p95": 0.7314184637498329
+      },
+      "model": "paradigma-inc/limite-1b-violetto",
+      "revision": "9f4d1567975a44c35127503deadfe52d434d734f",
+      "model_id": "limite-1b-violetto",
+      "label": "Limite 1B Violetto",
+      "variant": "original",
+      "fingerprint": "0ed663e455ee5d3933e01dd9e93fd696b21d64cc858a84019e439bf45b5580f5",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "task-chatml",
+      "chat_template_sha256": "ee623c62db56b687f89aedbfdea0b05a4d293ad57f2233090601c97d936bc088",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 72.61809530901155,
+      "headlines_per_second": 1.3908379112701184,
+      "parameters": 1035254176,
+      "peak_gpu_allocated_bytes": 2544118784,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.39613254725734826,
+        "p50": 0.38663748125054553,
+        "p95": 0.39145540749996144
+      },
+      "model": "meta-llama/Llama-3.2-1B",
+      "revision": "4e20de362430cd3b72f300e6b0f18e50e7166e08",
+      "model_id": "llama-3.2-1b",
+      "label": "Llama 3.2 1B",
+      "variant": "original",
+      "fingerprint": "21b173a79cf3bf9dafe619cb2fe8195f9d41c7cdcbbeb7a7dede91cef50d4700",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "plain",
+      "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 40.00938727299217,
+      "headlines_per_second": 2.5244075674255266,
+      "parameters": 1235814400,
+      "peak_gpu_allocated_bytes": 2545721344,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.9474592648019655,
+        "p50": 0.9469710969997323,
+        "p95": 0.9634564067500833
+      },
+      "model": "meta-llama/Llama-3.2-3B",
+      "revision": "13afe5124825b4f3751f836b40dafda64c1ed062",
+      "model_id": "llama-3.2-3b",
+      "label": "Llama 3.2 3B",
+      "variant": "original",
+      "fingerprint": "22b5a923e2bcd9f5c723265ef660e41d14b258c700b844edd68a4feb3bb51761",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "plain",
+      "chat_template_sha256": "385e19fae92e8c56ee44067da08d531ff506f9be5edc4f6c2c903bcf23dbdfe4",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 95.69338574499852,
+      "headlines_per_second": 1.0554543473792684,
+      "parameters": 3212749824,
+      "peak_gpu_allocated_bytes": 6602745856,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.45835151954459363,
+        "p50": 0.44557928900030674,
+        "p95": 0.46053738524960863
+      },
+      "model": "Octen/Octen-WebGR-0.6B",
+      "revision": "fafd37856a14996b2627a450063e63a007afe6b5",
+      "model_id": "octen-webgr-0.6b",
+      "label": "Octen WebGR 0.6B",
+      "variant": "original",
+      "fingerprint": "264fb65cd52dfe97bcaa72d98ccb64c100967391d7c484c4f0dc697ace710fda",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 46.293503474003955,
+      "headlines_per_second": 2.181731612875582,
+      "parameters": 730267648,
+      "peak_gpu_allocated_bytes": 1640835072,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.5423443753563766,
+        "p50": 0.5235488467506002,
+        "p95": 0.5322043587493681
+      },
+      "model": "Qwen/Qwen3.5-0.8B-Base",
+      "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68",
+      "model_id": "qwen3.5-0.8b-base",
+      "label": "Qwen3.5 0.8B Base",
+      "variant": "original",
+      "fingerprint": "65b1202518b0a8e86cba65e8b6bb018352fdb80c4db9c044cee84cb3ac273290",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 54.77678191099403,
+      "headlines_per_second": 1.8438469087890812,
+      "parameters": 752393024,
+      "peak_gpu_allocated_bytes": 1813066752,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.4502590496435149,
+        "p50": 0.5019907724999939,
+        "p95": 0.5280947845003539
+      },
+      "model": "Qwen/Qwen3.5-2B-Base",
+      "revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c",
+      "model_id": "qwen3.5-2b-base",
+      "label": "Qwen3.5 2B Base",
+      "variant": "original",
+      "fingerprint": "db8bd5cbd577466d93b163989b8d50b634dd7ad4d829d8700eed0cf8845db6fd",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 45.476164013995,
+      "headlines_per_second": 2.2209437007245794,
+      "parameters": 1881825088,
+      "peak_gpu_allocated_bytes": 3917654016,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    },
+    {
+      "count": 101,
+      "invalid": 101,
+      "exact_match": 0.0,
+      "topic_micro_f1": 0.0,
+      "type_accuracy": 0.0,
+      "score_mae": {
+        "etki": 3.0,
+        "ciddiyet": 3.0,
+        "aciliyet": 3.0
+      },
+      "latency_seconds": {
+        "mean": 0.21977927536640396,
+        "p50": 0.19840096850020927,
+        "p95": 0.31957698999940476
+      },
+      "model": "XHToken/Spark-X2.6-1.7B",
+      "revision": "3b9c837215b1a216ba48bca05607c8c509fef0d4",
+      "model_id": "spark-x2.6-1.7b",
+      "label": "Spark X2.6 1.7B",
+      "variant": "original",
+      "fingerprint": "41c7f120c875f4e37673081d2cf89a8a845f09cfb10f44bf535fcec2b586ba67",
+      "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+      "settings": {
+        "batch_size": 4,
+        "max_new_tokens": 160,
+        "warmup": 1,
+        "dtype": "bfloat16",
+        "decoding": "greedy",
+        "json_constraints": false
+      },
+      "prompt_style": "auto",
+      "chat_template_sha256": "480576bd2ef80726a0dba6406d72ca37f4f4f9ca747c7f1c8d159dbdf40f6929",
+      "backend": "transformers CUDA bfloat16; greedy; no JSON grammar",
+      "timing": "Amortized batch inference seconds per headline; not serial request latency",
+      "total_inference_seconds": 22.1977068120068,
+      "headlines_per_second": 4.550019551811038,
+      "parameters": 1707657216,
+      "peak_gpu_allocated_bytes": 3525828608,
+      "versions": {
+        "torch": "2.14.1",
+        "transformers": "5.20.2",
+        "peft": "0.21.2",
+        "triton": "3.8.0",
+        "flash-linear-attention": "0.6.0",
+        "fla-core": "0.6.0"
+      },
+      "overall_score": 0.0,
+      "overall_components": {
+        "topic_micro_f1": 0.0,
+        "type_accuracy": 0.0,
+        "score_accuracy": 0.0,
+        "exact_match": 0.0
+      },
+      "overall_score_version": "gundem-score-v1"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "gpt-x3-150m",
+      "label": "GPT-X3 150M",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.24752475247524752,
+        "topic_micro_f1": 0.8333333333333334,
+        "type_accuracy": 0.6633663366336634,
+        "invalid": -101,
+        "overall_score": 69.62046204620462
+      },
+      "score_mae_delta": {
+        "etki": -2.5445544554455446,
+        "ciddiyet": -2.782178217821782,
+        "aciliyet": -2.594059405940594
+      }
+    },
+    {
+      "id": "lfm3-posttrained",
+      "label": "LFM3 1.7B",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.36633663366336633,
+        "topic_micro_f1": 0.8744588744588745,
+        "type_accuracy": 0.8415841584158416,
+        "invalid": -101,
+        "overall_score": 77.88393125026789
+      },
+      "score_mae_delta": {
+        "etki": -2.6633663366336635,
+        "ciddiyet": -2.881188118811881,
+        "aciliyet": -2.702970297029703
+      }
+    },
+    {
+      "id": "lfm3-base",
+      "label": "LFM3 1.7B Base",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.3465346534653465,
+        "topic_micro_f1": 0.8938053097345132,
+        "type_accuracy": 0.8514851485148515,
+        "invalid": -100,
+        "overall_score": 78.13429130523672
+      },
+      "score_mae_delta": {
+        "etki": -2.6633663366336635,
+        "ciddiyet": -2.8514851485148514,
+        "aciliyet": -2.6930693069306932
+      }
+    },
+    {
+      "id": "octen-webgr-0.6b",
+      "label": "Octen WebGR 0.6B",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.2376237623762376,
+        "topic_micro_f1": 0.861995753715499,
+        "type_accuracy": 0.6633663366336634,
+        "invalid": -101,
+        "overall_score": 70.61234785898972
+      },
+      "score_mae_delta": {
+        "etki": -2.5742574257425743,
+        "ciddiyet": -2.8415841584158414,
+        "aciliyet": -2.603960396039604
+      }
+    },
+    {
+      "id": "spark-x2.6-1.7b",
+      "label": "Spark X2.6 1.7B",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.4158415841584158,
+        "topic_micro_f1": 0.9265033407572383,
+        "type_accuracy": 0.8910891089108911,
+        "invalid": -101,
+        "overall_score": 81.68948966166104
+      },
+      "score_mae_delta": {
+        "etki": -2.6930693069306932,
+        "ciddiyet": -2.891089108910891,
+        "aciliyet": -2.7425742574257423
+      }
+    },
+    {
+      "id": "llama-3.2-1b",
+      "label": "Llama 3.2 1B",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.43564356435643564,
+        "topic_micro_f1": 0.9122807017543859,
+        "type_accuracy": 0.8514851485148515,
+        "invalid": -100,
+        "overall_score": 81.03178738926525
+      },
+      "score_mae_delta": {
+        "etki": -2.7425742574257423,
+        "ciddiyet": -2.871287128712871,
+        "aciliyet": -2.762376237623762
+      }
+    },
+    {
+      "id": "llama-3.2-3b",
+      "label": "Llama 3.2 3B",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.43564356435643564,
+        "topic_micro_f1": 0.9186813186813186,
+        "type_accuracy": 0.8910891089108911,
+        "invalid": -101,
+        "overall_score": 82.08189170565409
+      },
+      "score_mae_delta": {
+        "etki": -2.6930693069306932,
+        "ciddiyet": -2.900990099009901,
+        "aciliyet": -2.801980198019802
+      }
+    },
+    {
+      "id": "limite-1b-violetto",
+      "label": "Limite 1B Violetto",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.25742574257425743,
+        "topic_micro_f1": 0.8394495412844036,
+        "type_accuracy": 0.6633663366336634,
+        "invalid": -101,
+        "overall_score": 70.03497138704697
+      },
+      "score_mae_delta": {
+        "etki": -2.5346534653465347,
+        "ciddiyet": -2.782178217821782,
+        "aciliyet": -2.613861386138614
+      }
+    },
+    {
+      "id": "qwen3.5-0.8b-base",
+      "label": "Qwen3.5 0.8B Base",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.45544554455445546,
+        "topic_micro_f1": 0.9107142857142857,
+        "type_accuracy": 0.8712871287128713,
+        "invalid": -101,
+        "overall_score": 81.94189061763319
+      },
+      "score_mae_delta": {
+        "etki": -2.702970297029703,
+        "ciddiyet": -2.910891089108911,
+        "aciliyet": -2.8118811881188117
+      }
+    },
+    {
+      "id": "qwen3.5-2b-base",
+      "label": "Qwen3.5 2B Base",
+      "delta_distilled_minus_original": {
+        "exact_match": 0.45544554455445546,
+        "topic_micro_f1": 0.9140271493212669,
+        "type_accuracy": 0.8316831683168316,
+        "invalid": -101,
+        "overall_score": 81.77725012320236
+      },
+      "score_mae_delta": {
+        "etki": -2.8415841584158414,
+        "ciddiyet": -2.9207920792079207,
+        "aciliyet": -2.8217821782178216
+      }
+    }
+  ],
+  "statuses": [
+    {
+      "id": "gpt-x3-150m",
+      "label": "GPT-X3 150M",
+      "status": "complete",
+      "detail": "",
+      "note": "Custom hybrid GDN architecture; training and cache support are tested by the suite."
+    },
+    {
+      "id": "lfm3-posttrained",
+      "label": "LFM3 1.7B",
+      "status": "complete",
+      "detail": "",
+      "note": ""
+    },
+    {
+      "id": "lfm3-base",
+      "label": "LFM3 1.7B Base",
+      "status": "complete",
+      "detail": "",
+      "note": ""
+    },
+    {
+      "id": "octen-webgr-0.6b",
+      "label": "Octen WebGR 0.6B",
+      "status": "complete",
+      "detail": "",
+      "note": "Specialized URL/SID retrieval model; JSON classification is out of its intended task. Unknown SID tokens count as invalid output."
+    },
+    {
+      "id": "spark-x2.6-1.7b",
+      "label": "Spark X2.6 1.7B",
+      "status": "complete",
+      "detail": "",
+      "note": ""
+    },
+    {
+      "id": "llama-3.2-1b",
+      "label": "Llama 3.2 1B",
+      "status": "complete",
+      "detail": "",
+      "note": "Base checkpoint without a native chat template; explicit plain task template shared by original and distilled."
+    },
+    {
+      "id": "llama-3.2-3b",
+      "label": "Llama 3.2 3B",
+      "status": "complete",
+      "detail": "",
+      "note": "Base checkpoint without a native chat template; explicit plain task template shared by original and distilled."
+    },
+    {
+      "id": "limite-1b-violetto",
+      "label": "Limite 1B Violetto",
+      "status": "complete",
+      "detail": "",
+      "note": "Native template requires a fixed math prompt. Both variants use an explicit task ChatML template; experimental LoRA support."
+    },
+    {
+      "id": "qwen3.5-0.8b-base",
+      "label": "Qwen3.5 0.8B Base",
+      "status": "complete",
+      "detail": "",
+      "note": "Text-only Qwen3_5ForCausalLM path; vision weights are not trained or evaluated."
+    },
+    {
+      "id": "qwen3.5-2b-base",
+      "label": "Qwen3.5 2B Base",
+      "status": "complete",
+      "detail": "",
+      "note": "Text-only Qwen3_5ForCausalLM path; vision weights are not trained or evaluated."
+    }
+  ],
+  "expected_variants": 20,
+  "completed_variants": 20,
+  "notes": [
+    "Teacher-label agreement on a small, previously evaluated test set; not human accuracy.",
+    "All results use HF/CUDA bfloat16 greedy generation without a JSON grammar.",
+    "Timing is amortized batch inference time per headline, not serial latency or phone speed.",
+    "Native wrappers differ across models. Within each pair, wrapper and checkpoint revision match.",
+    "Failed or pending variants are not assigned zero scores."
+  ],
+  "scoring": {
+    "id": "gundem-score-v1",
+    "name": "Gündem Score",
+    "range": [
+      0,
+      100
+    ],
+    "weights": {
+      "topic_micro_f1": 30,
+      "type_accuracy": 20,
+      "score_accuracy": 30,
+      "exact_match": 20
+    },
+    "score_accuracy": "1 - mean(etki_mae, ciddiyet_mae, aciliyet_mae) / 3",
+    "invalid_policy": "Already penalized in the input metrics; no extra validity multiplier.",
+    "scope": "Teacher-label agreement for this headline task; not general LLM capability or accuracy percent."
+  }
+}

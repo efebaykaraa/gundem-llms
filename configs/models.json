@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "loss_contract": "assistant-causal-token-mean-v1",
+  "dataset": "workspace/datasets/news-v1",
+  "workspace": "workspace",
+  "training": {"epochs": 3, "learning_rate": 0.0002, "rank": 16, "accumulation": 8, "max_length": 512, "seed": 42, "max_steps": -1},
+  "evaluation": {"batch_size": 4, "max_new_tokens": 160, "warmup": 1, "dtype": "bfloat16", "decoding": "greedy", "json_constraints": false},
+  "models": [
+    {"id": "gpt-x3-150m", "repo": "AxiomicLabs/GPT-X3-150M", "revision": "541bdc160e37de749378df2cf7de4023c8991fad", "label": "GPT-X3 150M", "prompt_style": "auto", "note": "Custom hybrid GDN architecture; training and cache support are tested by the suite."},
+    {"id": "lfm3-posttrained", "repo": "LiquidAI/LFM3-1.7B", "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7", "label": "LFM3 1.7B", "prompt_style": "native", "legacy_adapter": "data-deepseek/adapter"},
+    {"id": "lfm3-base", "repo": "LiquidAI/LFM3-1.7B-Base", "revision": "545fc8f4c7b5fa9f405105274cd29c4f8f44b526", "label": "LFM3 1.7B Base", "prompt_style": "native", "legacy_adapter": "data-deepseek-base/adapter"},
+    {"id": "octen-webgr-0.6b", "repo": "Octen/Octen-WebGR-0.6B", "revision": "fafd37856a14996b2627a450063e63a007afe6b5", "label": "Octen WebGR 0.6B", "prompt_style": "auto", "note": "Specialized URL/SID retrieval model; JSON classification is out of its intended task. Unknown SID tokens count as invalid output."},
+    {"id": "spark-x2.6-1.7b", "repo": "XHToken/Spark-X2.6-1.7B", "revision": "3b9c837215b1a216ba48bca05607c8c509fef0d4", "label": "Spark X2.6 1.7B", "prompt_style": "auto"},
+    {"id": "llama-3.2-1b", "repo": "meta-llama/Llama-3.2-1B", "revision": "main", "label": "Llama 3.2 1B", "prompt_style": "plain", "note": "Base checkpoint without a native chat template; explicit plain task template shared by original and distilled."},
+    {"id": "llama-3.2-3b", "repo": "meta-llama/Llama-3.2-3B", "revision": "main", "label": "Llama 3.2 3B", "prompt_style": "plain", "note": "Base checkpoint without a native chat template; explicit plain task template shared by original and distilled."},
+    {"id": "limite-1b-violetto", "repo": "paradigma-inc/limite-1b-violetto", "revision": "9f4d1567975a44c35127503deadfe52d434d734f", "label": "Limite 1B Violetto", "prompt_style": "task-chatml", "note": "Native template requires a fixed math prompt. Both variants use an explicit task ChatML template; experimental LoRA support."},
+    {"id": "qwen3.5-0.8b-base", "repo": "Qwen/Qwen3.5-0.8B-Base", "revision": "dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68", "label": "Qwen3.5 0.8B Base", "prompt_style": "auto", "note": "Text-only Qwen3_5ForCausalLM path; vision weights are not trained or evaluated."},
+    {"id": "qwen3.5-2b-base", "repo": "Qwen/Qwen3.5-2B-Base", "revision": "b1485b2fa6dfa1287294f269f5fb618e03d52d7c", "label": "Qwen3.5 2B Base", "prompt_style": "auto", "note": "Text-only Qwen3_5ForCausalLM path; vision weights are not trained or evaluated."}
+  ]
+}

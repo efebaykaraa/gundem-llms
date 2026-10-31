@@ -1,0 +1,54 @@
+{
+  "test_sha256": "d4b611258f52b5dcda7eba35c68ced5ce1b5c9c37707e6451af75156d2fbd57c",
+  "count": 101,
+  "warmup_requests_per_model": 1,
+  "old": {
+    "model": "gundem-benchmark-original",
+    "count": 101,
+    "invalid": 20,
+    "exact_match": 0.0,
+    "topic_micro_f1": 0.4487534626038781,
+    "type_accuracy": 0.10891089108910891,
+    "score_mae": {
+      "etki": 1.5346534653465347,
+      "ciddiyet": 1.2277227722772277,
+      "aciliyet": 1.2871287128712872
+    },
+    "latency_seconds": {
+      "mean": 0.3074723127722404,
+      "p50": 0.3034306099998503,
+      "p95": 0.38025123400075245
+    }
+  },
+  "new": {
+    "model": "gundem-benchmark-distilled",
+    "count": 101,
+    "invalid": 0,
+    "exact_match": 0.33663366336633666,
+    "topic_micro_f1": 0.8904109589041096,
+    "type_accuracy": 0.7524752475247525,
+    "score_mae": {
+      "etki": 0.3564356435643564,
+      "ciddiyet": 0.16831683168316833,
+      "aciliyet": 0.31683168316831684
+    },
+    "latency_seconds": {
+      "mean": 0.18268547591084133,
+      "p50": 0.18248052499984624,
+      "p95": 0.20239253299951088
+    }
+  },
+  "delta_new_minus_old": {
+    "exact_match": 0.33663366336633666,
+    "topic_micro_f1": 0.4416574963002315,
+    "type_accuracy": 0.6435643564356436,
+    "invalid": -20,
+    "score_mae": {
+      "etki": -1.1782178217821784,
+      "ciddiyet": -1.0594059405940595,
+      "aciliyet": -0.9702970297029703
+    },
+    "mean_seconds": -0.12478683686139908
+  },
+  "backend": "LM Studio Q4_K_M; gpu=max; context=2048; JSON schema"
+}

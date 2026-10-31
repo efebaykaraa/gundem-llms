@@ -1,0 +1,1 @@
+Classify headline only. Select only directly relevant topics; never copy all: TKP=Türkiye Komünist Partisi; EMEK=işçi,ücret,sendika,grev; TURKIYE=Türkiye; ULUSLARARASI=dış ülkeler; KUBA=Küba; EKONOMI=ekonomi; EYLEM=protesto,grev; DIGER=other. JSON: etiketler,tur,etki/ciddiyet/aciliyet (0..3).

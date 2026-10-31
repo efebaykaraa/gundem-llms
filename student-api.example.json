@@ -1,0 +1,10 @@
+{
+  "base_url":"http://127.0.0.1:8001/v1",
+  "model":"gundem-lfm",
+  "api_key_env":"STUDENT_API_KEY",
+  "timeout":180,
+  "max_tokens":160,
+  "temperature":0,
+  "response_format":"json_schema",
+  "extra_body":{"chat_template_kwargs":{"enable_thinking":false}}
+}
