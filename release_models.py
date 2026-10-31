@@ -178,7 +178,7 @@ HF/CUDA BF16, greedy, batch=4, maximum 160 new tokens, no JSON grammar. Gündem 
 {extra}
 The task uses a small, domain-specific dataset. Inspect predictions before relying on them. Raw headlines, teacher answers and the full dataset are not redistributed. Model licensing is separate from the MIT-licensed Gündem helper code.
 
-[Training and benchmark tools](https://github.com/efebaykaraa/Gundem) · [All released models](https://github.com/efebaykaraa/Gundem/releases/tag/models-v1.0.0)
+[Training and benchmark tools](https://github.com/efebaykaraa/gundem-llms) · [All released models](https://github.com/efebaykaraa/gundem-llms/releases/tag/models-v1.0.0)
 '''
         (target / 'README.md').write_text(card)
         # ZIP is adapter-only. GGUF binaries are separate GitHub assets.
