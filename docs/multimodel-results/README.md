@@ -1,6 +1,20 @@
-# Multi-model results
+<div align="center">
 
-[Türkçe](README.tr.md)
+<h1>Model results</h1>
+
+<p>Original and distilled models on the Gündem headline classification task.</p>
+
+<p>
+  <a href="leaderboard.md"><img src="https://img.shields.io/badge/Models-10-64748B?style=for-the-badge" alt="Models: 10"></a>
+  <a href="leaderboard.json"><img src="https://img.shields.io/badge/Evaluations-20%20%2F%2020-0D9488?style=for-the-badge" alt="Evaluations: 20 / 20"></a>
+  <a href="../SCORING.md"><img src="https://img.shields.io/badge/G%C3%BCndem%20Score-0%E2%80%93100-7F52FF?style=for-the-badge" alt="Gündem Score: 0–100"></a>
+</p>
+
+<p>
+  <a href="README.tr.md">Türkçe</a> &nbsp;·&nbsp; <a href="leaderboard.csv">CSV</a> &nbsp;·&nbsp; <a href="leaderboard.json">JSON</a> &nbsp;·&nbsp; <a href="../../README.md">Usage guide</a>
+</p>
+
+</div>
 
 2026-11-01 · **10 models, 20/20 evaluations complete.**
 

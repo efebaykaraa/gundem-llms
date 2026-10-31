@@ -1,6 +1,20 @@
-# Çoklu model sonuçları
+<div align="center">
 
-[English](README.md)
+<h1>Model sonuçları</h1>
+
+<p>Orijinal ve distilled modellerin Gündem haber sınıflandırma kıyası.</p>
+
+<p>
+  <a href="leaderboard.md"><img src="https://img.shields.io/badge/Models-10-64748B?style=for-the-badge" alt="Models: 10"></a>
+  <a href="leaderboard.json"><img src="https://img.shields.io/badge/Evaluations-20%20%2F%2020-0D9488?style=for-the-badge" alt="Evaluations: 20 / 20"></a>
+  <a href="../SCORING.tr.md"><img src="https://img.shields.io/badge/G%C3%BCndem%20Score-0%E2%80%93100-7F52FF?style=for-the-badge" alt="Gündem Score: 0–100"></a>
+</p>
+
+<p>
+  <a href="README.md">English</a> &nbsp;·&nbsp; <a href="leaderboard.csv">CSV</a> &nbsp;·&nbsp; <a href="leaderboard.json">JSON</a> &nbsp;·&nbsp; <a href="../../README.tr.md">Kullanım kılavuzu</a>
+</p>
+
+</div>
 
 2026-11-01 · **10 model, 20/20 ölçüm tamamlandı.**
 

@@ -1,10 +1,27 @@
-# Gündem Distillation Lab
+<div align="center">
 
-Türkçe haber başlıklarını sınıflandıran küçük modeller eğitin, orijinal ve distilled sürümleri karşılaştırın, Türkçe/İngilizce grafikler üretin.
+<h1>Gündem Distillation Lab</h1>
 
-[English](README.md) · [Model sonuçları](docs/multimodel-results/README.tr.md)
+<p>Haber başlıkları için küçük modeller. Eğitimden kıyasa tek akış.</p>
+
+<p>
+  <a href="#kurulum"><img src="https://img.shields.io/badge/Python-Training%20tools-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python: Training tools"></a>
+  <a href="requirements-train.txt"><img src="https://img.shields.io/badge/PyTorch-LoRA%20SFT-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch: LoRA SFT"></a>
+  <a href="#kurulum"><img src="https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA: CUDA"></a>
+  <a href="docs/multimodel-results/README.tr.md"><img src="https://img.shields.io/badge/Reports-TR%20%2B%20EN-0D9488?style=for-the-badge" alt="Reports: TR + EN"></a>
+</p>
+
+<p>
+  <a href="README.md">English</a> &nbsp;·&nbsp; <a href="#kurulum">Kurulum</a> &nbsp;·&nbsp; <a href="docs/multimodel-results/README.tr.md">Model sonuçları</a> &nbsp;·&nbsp; <a href="docs/SCORING.tr.md">Gündem Score</a>
+</p>
+
+</div>
 
 Akış, DeepSeek veya yerel Qwen ile başlıkları etiketler; bu cevaplarla LoRA adapter eğitir. Model ağırlıkları ve tam veri kümesi yerelde indirilir veya oluşturulur.
+
+> **Başlıklar → Öğretmen etiketleri → LoRA eğitimi → Kıyas ve grafikler**
+
+[Eğitilmiş modelleri indir](docs/RELEASES.tr.md): Hugging Face adapter’ları ve GitHub GGUF/ZIP dosyaları.
 
 ## Kurulum
 

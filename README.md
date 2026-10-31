@@ -1,10 +1,27 @@
-# Gündem Distillation Lab
+<div align="center">
 
-Train small models to classify Turkish news headlines, compare original and distilled versions, and generate English/Turkish charts.
+<h1>Gündem Distillation Lab</h1>
 
-[Türkçe](README.tr.md) · [Model results](docs/multimodel-results/README.md)
+<p>Small models for news headlines. From teacher labels to model comparisons.</p>
+
+<p>
+  <a href="#setup"><img src="https://img.shields.io/badge/Python-Training%20tools-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python: Training tools"></a>
+  <a href="requirements-train.txt"><img src="https://img.shields.io/badge/PyTorch-LoRA%20SFT-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch: LoRA SFT"></a>
+  <a href="#setup"><img src="https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="NVIDIA: CUDA"></a>
+  <a href="docs/multimodel-results/README.md"><img src="https://img.shields.io/badge/Reports-TR%20%2B%20EN-0D9488?style=for-the-badge" alt="Reports: TR + EN"></a>
+</p>
+
+<p>
+  <a href="README.tr.md">Türkçe</a> &nbsp;·&nbsp; <a href="#setup">Setup</a> &nbsp;·&nbsp; <a href="docs/multimodel-results/README.md">Model results</a> &nbsp;·&nbsp; <a href="docs/SCORING.md">Gündem Score</a>
+</p>
+
+</div>
 
 The workflow uses DeepSeek or a local Qwen model to label headlines, then trains a LoRA adapter on those answers. Model weights and full datasets are downloaded or generated locally.
+
+> **Headlines → Teacher labels → LoRA training → Benchmarks and charts**
+
+[Download trained models](docs/RELEASES.md): Hugging Face adapters and GitHub GGUF/ZIP assets.
 
 ## Setup
 
