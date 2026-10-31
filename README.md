@@ -8,8 +8,6 @@ The pipeline collects RSS headlines, generates structured labels with a teacher 
 
 **This repository contains tools and sample headlines. Trained weights, full training datasets, checkpoints, API keys, and local environments are excluded from Git.** A fresh clone must generate or obtain its own model artifacts before running a model benchmark.
 
-**[Gündem Score v1](docs/SCORING.md)** ranks results on a fixed 0–100 quality scale, with CSV/JSON/Markdown and bilingual `overall` charts generated automatically. Speed remains separate.
-
 ## Multi-model suite: original and distilled
 
 The organized suite covers **10 models / 20 variants**: LFM3, LFM3 Base, GPT-X3
@@ -51,7 +49,55 @@ and [configuration notes](configs/README.md) before interpreting results.
 
 This is **response distillation**: teacher-generated answers become training targets. It does not copy teacher weights or token probabilities, and it does not reduce the student's parameter count.
 
-## Example results
+## Gündem Score and current results
+
+**Gündem Score v1** summarizes quality for this headline classification task on a **0–100** scale. Higher is better. Weights: **30% topic F1 + 20% type accuracy + 30% numeric score accuracy + 20% exact match**. Numeric accuracy is `1 − mean MAE / 3`. Speed, model size and memory are reported separately.
+
+**2026-11-01: all 20 evaluations complete across 10 original/distilled model pairs.** Results below are distilled variants.
+
+| Model | Gündem Score / 100 | Exact match | Topic F1 |
+| --- | ---: | ---: | ---: |
+| Llama 3.2 3B | **82.1** | 43.6% | 91.9% |
+| Qwen3.5 0.8B Base | **81.9** | 45.5% | 91.1% |
+| Qwen3.5 2B Base | **81.8** | 45.5% | 91.4% |
+| Spark X2.6 1.7B | **81.7** | 41.6% | 92.7% |
+| Llama 3.2 1B | **81.0** | 43.6% | 91.2% |
+| LFM3 1.7B Base | **78.1** | 34.7% | 89.4% |
+| LFM3 1.7B | **77.9** | 36.6% | 87.4% |
+| Octen WebGR 0.6B | **70.6** | 23.8% | 86.2% |
+| Limite 1B Violetto | **70.0** | 25.7% | 83.9% |
+| GPT-X3 150M | **69.6** | 24.8% | 83.3% |
+
+[Full table, CSV/JSON and provenance](docs/multimodel-results/README.md) · [Score formula and limitations](docs/SCORING.md)
+
+![Gündem Score](docs/multimodel-results/overall-en.png)
+
+[SVG chart](docs/multimodel-results/overall-en.svg) · [Türkçe grafik](docs/multimodel-results/overall-tr.png)
+
+This is not general LLM intelligence or an accuracy percentage. Results use 101 teacher-labelled headlines, one seed, HF/CUDA BF16, greedy decoding and no JSON grammar. Small score differences do not establish superiority. All original models failed the five-field JSON contract under this short task prompt and scored 0. Invalid responses are already penalized in the metrics; unevaluated variants remain unscored.
+
+### Result files
+
+- `workspace/experiments/<model>/adapter/`: LoRA adapters.
+- `workspace/reports/leaderboard.{json,csv,md}`: Gündem Score, component metrics and original→distilled deltas.
+- `workspace/reports/overall-{tr,en}.{png,svg}`: 0–100 overall ranking.
+- `workspace/reports/comparison-{tr,en}.{png,svg}`: detailed six-panel comparison.
+
+Refresh scores and charts from existing evaluations without rerunning models:
+
+```bash
+bash run_experiments.sh report
+```
+
+Render charts from the shared summary JSON with Matplotlib only:
+
+```bash
+python3 plot_experiments.py \
+  --input docs/multimodel-results/leaderboard.json \
+  --out data/charts
+```
+
+## Earlier LM Studio Q4 example
 
 One local run used DeepSeek-generated labels, 825 training examples, 107 validation examples, 101 held-out test examples, and three epochs of LoRA training. Both models were evaluated as Q4_K_M GGUFs through LM Studio with full GPU offload, a 2,048-token context, JSON schema output, and one excluded warmup request per model.
 

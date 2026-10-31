@@ -43,6 +43,8 @@ Aşağıdaki tablo distilled sürümleri gösterir. [Tam orijinal/distilled tabl
 
 ## Yeniden çalıştırma
 
+Puan hesabı ve TR/EN overall grafikleri rapor komutuyla otomatik yenilenir. Yeni eğitim veya model yükleme gerekmez.
+
 Yerel veri ve adapter’lar mevcutken, `tools/distill` içinde:
 
 ```bash

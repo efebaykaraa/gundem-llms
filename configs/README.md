@@ -47,3 +47,11 @@ Primary model cards:
 - https://huggingface.co/paradigma-inc/limite-1b-violetto
 - https://huggingface.co/Qwen/Qwen3.5-0.8B-Base
 - https://huggingface.co/Qwen/Qwen3.5-2B-Base
+
+## Overall ranking
+
+[Gündem Score v1](../docs/SCORING.md) uses fixed weights: 30 points topic F1,
+20 type accuracy, 30 normalized numeric score accuracy, and 20 exact match.
+Speed and model size are separate. Weights are versioned in `lab/scoring.py`;
+changing them requires a new score version. The common recipe in `models.json`
+does not change the scoring formula.

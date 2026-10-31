@@ -10,8 +10,6 @@ Akış: **RSS başlıkları → öğretmen etiketleri → veri ayrımı → LoRA
 
 **Bu repo araçları ve örnek başlıkları içerir. Eğitilmiş model ağırlıkları, tam eğitim verisi, checkpoint’ler, API anahtarları ve sanal ortamlar Git’e dahil değildir.** Yeni klonlanan repoda model benchmark’ı çalıştırmadan önce model dosyaları hazırlanmalıdır.
 
-**[Gündem Score v1](docs/SCORING.tr.md)** sonuçları 0–100 kalite puanıyla sıralar; CSV/JSON/Markdown ve TR/EN `overall` grafikleri otomatik üretilir. Hız ayrı tutulur.
-
 ## Çoklu model: orijinal ve distilled
 
 Yeni deney akışı **10 model / 20 varyant** içerir: LFM3, LFM3 Base, GPT-X3 150M,
@@ -41,7 +39,55 @@ seri ölçümlerinden ayrıdır. Mimari ve şablon farkları açıkça kaydedili
 [Çoklu model kılavuzu](docs/MULTI-MODEL.tr.md) ve
 [yapılandırma notları](configs/README.md) ayrıntıları açıklar.
 
-## Örnek sonuç
+## Gündem Score ve güncel sonuçlar
+
+**Gündem Score v1**, bu haber sınıflandırma görevindeki kaliteyi **0–100** arasında tek sayıyla özetler. Yüksek daha iyi. Ağırlıklar: **%30 etiket F1 + %20 tür doğruluğu + %30 sayısal puan doğruluğu + %20 tam eşleşme**. Sayısal doğruluk `1 − ortalama MAE / 3` ile hesaplanır. Hız, model boyutu ve bellek ayrı gösterilir.
+
+**2026-11-01: 10 model, orijinal + distilled olmak üzere 20/20 ölçüm tamamlandı.** Aşağıdaki sonuçlar distilled sürümlere aittir.
+
+| Model | Gündem Score / 100 | Tam eşleşme | Etiket F1 |
+| --- | ---: | ---: | ---: |
+| Llama 3.2 3B | **82,1** | %43,6 | %91,9 |
+| Qwen3.5 0.8B Base | **81,9** | %45,5 | %91,1 |
+| Qwen3.5 2B Base | **81,8** | %45,5 | %91,4 |
+| Spark X2.6 1.7B | **81,7** | %41,6 | %92,7 |
+| Llama 3.2 1B | **81,0** | %43,6 | %91,2 |
+| LFM3 1.7B Base | **78,1** | %34,7 | %89,4 |
+| LFM3 1.7B | **77,9** | %36,6 | %87,4 |
+| Octen WebGR 0.6B | **70,6** | %23,8 | %86,2 |
+| Limite 1B Violetto | **70,0** | %25,7 | %83,9 |
+| GPT-X3 150M | **69,6** | %24,8 | %83,3 |
+
+[Tam tablo, CSV/JSON ve deney bilgileri](docs/multimodel-results/README.tr.md) · [Puanın formülü ve sınırları](docs/SCORING.tr.md)
+
+![Gündem Score](docs/multimodel-results/overall-tr.png)
+
+[SVG grafik](docs/multimodel-results/overall-tr.svg) · [English chart](docs/multimodel-results/overall-en.png)
+
+Bu puan genel LLM zekâsı veya doğruluk yüzdesi değildir. Sonuçlar 101 öğretmen etiketli başlıkta, tek seed ile HF/CUDA BF16, greedy ve JSON grammar olmadan ölçüldü. Küçük puan farkları kesin üstünlük göstermez. Bütün orijinal modeller bu kısa görev talimatında geçerli beş alanlı JSON üretemedi ve 0 puan aldı. Geçersiz cevaplar zaten metriklerde cezalıdır; ölçülmemiş varyantlara puan atanmaz.
+
+### Sonuç dosyaları
+
+- `workspace/experiments/<model>/adapter/`: LoRA adapter’ları.
+- `workspace/reports/leaderboard.{json,csv,md}`: Gündem Score, metrikler ve orijinal→distilled farkları.
+- `workspace/reports/overall-{tr,en}.{png,svg}`: 0–100 overall sıralaması.
+- `workspace/reports/comparison-{tr,en}.{png,svg}`: ayrıntılı altı panelli kıyas.
+
+Modelleri tekrar çalıştırmadan mevcut ölçümlerden puanları ve grafikleri yenile:
+
+```bash
+bash run_experiments.sh report
+```
+
+Yalnız paylaşılan özet JSON’dan, Matplotlib ile grafik üret:
+
+```bash
+python3 plot_experiments.py \
+  --input docs/multimodel-results/leaderboard.json \
+  --out data/charts
+```
+
+## Önceki LM Studio Q4 örneği
 
 Yerel denemede DeepSeek etiketleriyle 825 eğitim, 107 doğrulama, 101 ayrılmış test örneği ve 3 epoch kullanıldı. İki model de LM Studio üzerinde Q4_K_M, tam GPU offload, 2048 token bağlam ve JSON şemasıyla ölçüldü. Model başına bir ısınma isteği ölçüm dışında bırakıldı.
 

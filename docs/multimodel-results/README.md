@@ -43,6 +43,8 @@ A 0–100 overall quality score: **30% topic F1 + 20% type accuracy + 30% numeri
 
 ## Rerun
 
+The report command automatically refreshes scores and bilingual overall charts. No new training or model loading is needed.
+
 With the local data and adapters available, from `tools/distill`:
 
 ```bash
