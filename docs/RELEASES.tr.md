@@ -26,6 +26,8 @@ Adapter ZIP’leri temel modelle birlikte çalışır. LFM GGUF dosyaları tek b
 
 Gündem’de **Model → GGUF dosyası seç** ile içe aktarın. HF/BF16 kıyas puanları doğrudan GGUF performansını göstermez.
 
+GGUF dosyalarıyla birlikte lisans ve atıf metinlerini içeren [LICENSES.zip](https://github.com/efebaykaraa/Gundem/releases/download/models-v1.0.0/LICENSES.zip) paketini de indirin.
+
 ## Adapter kullanımı
 
 ZIP’i açın; CUDA destekli PyTorch ve paket bağımlılıklarını kurun. Ardından açılan klasörde:

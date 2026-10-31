@@ -26,6 +26,8 @@ Adapter ZIPs require the base model. LFM GGUF files are standalone and require a
 
 In Gündem, import through **Model → GGUF dosyası seç**. HF/BF16 benchmark scores do not directly describe GGUF performance.
 
+Download [LICENSES.zip](https://github.com/efebaykaraa/Gundem/releases/download/models-v1.0.0/LICENSES.zip) alongside GGUF files for the applicable licenses and attribution notices.
+
 ## Use an adapter
 
 Extract the ZIP and install CUDA-enabled PyTorch and the packaged requirements. From the extracted folder:

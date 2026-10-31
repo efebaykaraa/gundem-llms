@@ -204,6 +204,12 @@ The task uses a small, domain-specific dataset. Inspect predictions before relyi
     write(assets / 'release-index.json', {'tag': 'models-v1.0.0', 'models': entries})
     for name in ('leaderboard.json', 'leaderboard.csv', 'overall-tr.png', 'overall-en.png'):
         shutil.copy2(ROOT / 'workspace/reports' / name, assets / name)
+    with zipfile.ZipFile(assets / 'LICENSES.zip', 'w', compression=zipfile.ZIP_DEFLATED) as bundle:
+        for entry in entries:
+            folder = out / entry['folder']
+            for path in sorted(folder.iterdir()):
+                if path.is_file() and any(term in path.name.lower() for term in ('license', 'notice', 'use_policy')):
+                    bundle.write(path, arcname=folder.name + '/' + path.name)
     checksum = '\n'.join(f'{digest(path)}  {path.name}' for path in sorted(assets.iterdir())
                          if path.is_file() and path.name != 'SHA256SUMS.txt')
     (assets / 'SHA256SUMS.txt').write_text(checksum + '\n')
@@ -215,6 +221,7 @@ The task uses a small, domain-specific dataset. Inspect predictions before relyi
         notes.append(f'| {entry["model_id"]} | [{entry["repo_id"]}](https://huggingface.co/{entry["repo_id"]}) | {entry["overall_score"]:.1f} | {entry["license"]} |')
     notes += ['', 'Scores measure teacher-label agreement on 101 headlines: HF/CUDA BF16, greedy, batch=4, no JSON grammar. They are not general LLM capability or phone performance. Close scores are not evidence of meaningful superiority. GGUF artifacts were quantized separately; these scores do not describe GGUF inference.', '',
               'Use the README inside each ZIP. Llama: Built with Llama; base access and Meta terms apply. Octen: non-commercial CC BY-NC 4.0. LFM: LFM Open License v1.0. Other models: upstream Apache-2.0. License files and attribution notices are included per model.', '',
+              'Download LICENSES.zip alongside standalone GGUF files for the applicable licenses and attribution notices.', '',
               'Verify downloads with `sha256sum -c SHA256SUMS.txt`. Raw data, API keys, optimizer state and training environments are not included.']
     (out / 'release-notes.md').write_text('\n'.join(notes) + '\n')
     return entries
