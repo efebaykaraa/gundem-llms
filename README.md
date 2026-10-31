@@ -111,3 +111,5 @@ The adapter is written to `data-deepseek/adapter/` and the merged HF model to `d
 For app use, export a compatible GGUF and import it into Gündem. For LM Studio comparison, install LM Studio and its `lms` CLI, then run `bash benchmark_lms.sh` after training and merging in the full Gündem checkout.
 
 [Manual training, GGUF export and benchmark commands](docs/USAGE.md) · [Model configuration](configs/README.md).
+
+[Android app](https://github.com/efebaykaraa/gundem-android)

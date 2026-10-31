@@ -111,3 +111,5 @@ Adapter `data-deepseek/adapter/`, birleştirilmiş HF modeli `data-deepseek/merg
 Uygulamada kullanmak için uyumlu GGUF dışa aktarıp Gündem’e yükleyin. LM Studio ile kıyaslamak için LM Studio ve `lms` CLI kurun; tam Gündem projesinde eğitim ve birleştirme sonrasında `bash benchmark_lms.sh` çalıştırın.
 
 [Elle eğitim, GGUF dönüşümü ve benchmark komutları](docs/USAGE.tr.md) · [Model yapılandırması](configs/README.md).
+
+[Android uygulaması](https://github.com/efebaykaraa/gundem-android)
