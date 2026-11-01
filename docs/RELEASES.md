@@ -19,12 +19,14 @@ Adapter ZIPs require the base model. LFM GGUF files are standalone and require a
 | limite-1b-violetto | [efebaykara/limite-1b-violetto-Gundem-LoRA](https://huggingface.co/efebaykara/limite-1b-violetto-Gundem-LoRA) | [ZIP](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/limite-1b-violetto-Gundem-LoRA.zip) |
 | gpt-x3-150m | [efebaykara/GPT-X3-150M-Gundem-LoRA](https://huggingface.co/efebaykara/GPT-X3-150M-Gundem-LoRA) | [ZIP](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/GPT-X3-150M-Gundem-LoRA.zip) |
 
+[All 20 original/fine-tuned mobile downloads with scores](MOBILE.md) are available on Hugging Face.
+
 ## GGUF
 
 - [LFM3-1.7B-Base-Gundem-Q4_K_M.gguf](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/LFM3-1.7B-Base-Gundem-Q4_K_M.gguf)
 - [LFM3-1.7B-Gundem-Q4_K_M.gguf](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/LFM3-1.7B-Gundem-Q4_K_M.gguf)
 
-In Gündem, import through **Model → GGUF dosyası seç**. HF/BF16 benchmark scores do not directly describe GGUF performance.
+In Gündem, import through **Model → Model dosyası seç**. HF/BF16 benchmark scores do not directly describe GGUF performance.
 
 Download [LICENSES.zip](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/LICENSES.zip) alongside GGUF files for the applicable licenses and attribution notices.
 

@@ -19,12 +19,14 @@ Adapter ZIP’leri temel modelle birlikte çalışır. LFM GGUF dosyaları tek b
 | limite-1b-violetto | [efebaykara/limite-1b-violetto-Gundem-LoRA](https://huggingface.co/efebaykara/limite-1b-violetto-Gundem-LoRA) | [ZIP](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/limite-1b-violetto-Gundem-LoRA.zip) |
 | gpt-x3-150m | [efebaykara/GPT-X3-150M-Gundem-LoRA](https://huggingface.co/efebaykara/GPT-X3-150M-Gundem-LoRA) | [ZIP](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/GPT-X3-150M-Gundem-LoRA.zip) |
 
+[Puanlarıyla birlikte 20 orijinal/fine-tuned mobil indirme](MOBILE.tr.md) Hugging Face üzerinde mevcut.
+
 ## GGUF
 
 - [LFM3-1.7B-Base-Gundem-Q4_K_M.gguf](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/LFM3-1.7B-Base-Gundem-Q4_K_M.gguf)
 - [LFM3-1.7B-Gundem-Q4_K_M.gguf](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/LFM3-1.7B-Gundem-Q4_K_M.gguf)
 
-Gündem’de **Model → GGUF dosyası seç** ile içe aktarın. HF/BF16 kıyas puanları doğrudan GGUF performansını göstermez.
+Gündem’de **Model → Model dosyası seç** ile içe aktarın. HF/BF16 kıyas puanları doğrudan GGUF performansını göstermez.
 
 GGUF dosyalarıyla birlikte lisans ve atıf metinlerini içeren [LICENSES.zip](https://github.com/efebaykaraa/gundem-llms/releases/download/models-v1.0.0/LICENSES.zip) paketini de indirin.
 

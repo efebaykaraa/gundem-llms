@@ -23,6 +23,8 @@ The workflow uses DeepSeek or a local Qwen model to label headlines, then trains
 
 [Download trained models](docs/RELEASES.md): Hugging Face adapters and GitHub GGUF/ZIP assets.
 
+[20 mobile downloads and scores](docs/MOBILE.md): original + fine-tuned for every family, ready for [Gündem Android](https://github.com/efebaykaraa/gundem-android).
+
 ## Setup
 
 Use Linux/Bash, Python with venv support, and an NVIDIA CUDA GPU for training. Install a CUDA-enabled PyTorch build suitable for your machine. Run these commands from this directory:

@@ -23,6 +23,8 @@ Akış, DeepSeek veya yerel Qwen ile başlıkları etiketler; bu cevaplarla LoRA
 
 [Eğitilmiş modelleri indir](docs/RELEASES.tr.md): Hugging Face adapter’ları ve GitHub GGUF/ZIP dosyaları.
 
+[20 mobil indirme ve puanları](docs/MOBILE.tr.md): her ailenin orijinal ve fine-tuned sürümü, [Gündem Android](https://github.com/efebaykaraa/gundem-android) için hazır.
+
 ## Kurulum
 
 Eğitim için Linux/Bash, venv destekli Python ve NVIDIA CUDA GPU kullanın. Makinenize uygun CUDA destekli PyTorch kurun. Komutları bu klasörde çalıştırın:
